@@ -167,40 +167,40 @@
 
 //	t = copytext(sanitize(t),1,MAX_MESSAGE_LEN)
 
-	t = replacetext(t, "\[center\]", "<center>")
-	t = replacetext(t, "\[/center\]", "</center>")
-	t = replacetext(t, "\[br\]", "<BR>")
-	t = replacetext(t, "\[b\]", "<B>")
-	t = replacetext(t, "\[/b\]", "</B>")
-	t = replacetext(t, "\[i\]", "<I>")
-	t = replacetext(t, "\[/i\]", "</I>")
-	t = replacetext(t, "\[u\]", "<U>")
-	t = replacetext(t, "\[/u\]", "</U>")
-	t = replacetext(t, "\[large\]", "<font size=\"4\">")
-	t = replacetext(t, "\[/large\]", "</font>")
-	t = replacetext(t, "\[sign\]", "<font face=\"[signfont]\"><i>[user.real_name]</i></font>")
-	t = replacetext(t, "\[field\]", "<span class=\"paper_field\"></span>")
+	t = _replacetext(t, "\[center\]", "<center>")
+	t = _replacetext(t, "\[/center\]", "</center>")
+	t = _replacetext(t, "\[br\]", "<BR>")
+	t = _replacetext(t, "\[b\]", "<B>")
+	t = _replacetext(t, "\[/b\]", "</B>")
+	t = _replacetext(t, "\[i\]", "<I>")
+	t = _replacetext(t, "\[/i\]", "</I>")
+	t = _replacetext(t, "\[u\]", "<U>")
+	t = _replacetext(t, "\[/u\]", "</U>")
+	t = _replacetext(t, "\[large\]", "<font size=\"4\">")
+	t = _replacetext(t, "\[/large\]", "</font>")
+	t = _replacetext(t, "\[sign\]", "<font face=\"[signfont]\"><i>[user.real_name]</i></font>")
+	t = _replacetext(t, "\[field\]", "<span class=\"paper_field\"></span>")
 
 	if(!iscrayon)
-		t = replacetext(t, "\[*\]", "<li>")
-		t = replacetext(t, "\[hr\]", "<HR>")
-		t = replacetext(t, "\[small\]", "<font size = \"1\">")
-		t = replacetext(t, "\[/small\]", "</font>")
-		t = replacetext(t, "\[list\]", "<ul>")
-		t = replacetext(t, "\[/list\]", "</ul>")
+		t = _replacetext(t, "\[*\]", "<li>")
+		t = _replacetext(t, "\[hr\]", "<HR>")
+		t = _replacetext(t, "\[small\]", "<font size = \"1\">")
+		t = _replacetext(t, "\[/small\]", "</font>")
+		t = _replacetext(t, "\[list\]", "<ul>")
+		t = _replacetext(t, "\[/list\]", "</ul>")
 
 		t = "<font face=\"[deffont]\" color=[P.colour]>[t]</font>"
 	else // If it is a crayon, and he still tries to use these, make them empty!
-		t = replacetext(t, "\[*\]", "")
-		t = replacetext(t, "\[hr\]", "")
-		t = replacetext(t, "\[small\]", "")
-		t = replacetext(t, "\[/small\]", "")
-		t = replacetext(t, "\[list\]", "")
-		t = replacetext(t, "\[/list\]", "")
+		t = _replacetext(t, "\[*\]", "")
+		t = _replacetext(t, "\[hr\]", "")
+		t = _replacetext(t, "\[small\]", "")
+		t = _replacetext(t, "\[/small\]", "")
+		t = _replacetext(t, "\[list\]", "")
+		t = _replacetext(t, "\[/list\]", "")
 
 		t = "<font face=\"[crayonfont]\" color=[P.colour]><b>[t]</b></font>"
 
-//	t = replacetext(t, "#", "") // Junk converted to nothing!
+//	t = _replacetext(t, "#", "") // Junk converted to nothing!
 
 //Count the fields
 	var/laststart = 1

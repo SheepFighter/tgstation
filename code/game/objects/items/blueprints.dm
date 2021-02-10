@@ -189,15 +189,15 @@
 		return
 	for(var/area/RA in A.related)
 		for(var/obj/machinery/alarm/M in RA)
-			M.name = replacetext(M.name,oldtitle,title)
+			M.name = _replacetext(M.name,oldtitle,title)
 		for(var/obj/machinery/power/apc/M in RA)
-			M.name = replacetext(M.name,oldtitle,title)
+			M.name = _replacetext(M.name,oldtitle,title)
 		for(var/obj/machinery/atmospherics/unary/vent_scrubber/M in RA)
-			M.name = replacetext(M.name,oldtitle,title)
+			M.name = _replacetext(M.name,oldtitle,title)
 		for(var/obj/machinery/atmospherics/unary/vent_pump/M in RA)
-			M.name = replacetext(M.name,oldtitle,title)
+			M.name = _replacetext(M.name,oldtitle,title)
 		for(var/obj/machinery/door/M in RA)
-			M.name = replacetext(M.name,oldtitle,title)
+			M.name = _replacetext(M.name,oldtitle,title)
 	//TODO: much much more. Unnamed airlocks, cameras, etc.
 
 

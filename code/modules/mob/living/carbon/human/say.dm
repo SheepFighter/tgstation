@@ -23,7 +23,7 @@
 		message = dna.species.handle_speech(message,src)
 
 	if (dna.check_mutation(HULK))
-		message = "[uppertext(replacetext(message, ".", "!"))]!!" //because I don't know how to code properly in getting vars from other files -Bro
+		message = "[uppertext(_replacetext(message, ".", "!"))]!!" //because I don't know how to code properly in getting vars from other files -Bro
 
 	if(viruses.len)
 		for(var/datum/disease/pierrot_throat/D in viruses)
@@ -122,7 +122,7 @@
 			var/temp = winget(client, "input", "text")
 			if(findtextEx(temp, "Say \"", 1, 7) && length(temp) > 5)	//"case sensitive means
 
-				temp = replacetext(temp, ";", "")	//general radio
+				temp = _replacetext(temp, ";", "")	//general radio
 
 				if(findtext(trim_left(temp), ":", 6, 7))	//dept radio
 					temp = copytext(trim_left(temp), 8)
